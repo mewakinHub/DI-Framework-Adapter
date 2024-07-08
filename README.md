@@ -30,6 +30,55 @@ Project:
     - for Hexagonal Architecture,
         - python generate_structure.py structure_hexagonal_architecture.md
 
+### Comparison
+
+| Approach                        | Flexibility | Maintainability | Ease of Use |
+|---------------------------------|-------------|-----------------|-------------|
+| Adapter Pattern                 | Moderate    | High            | Moderate    |
+| Strategy Pattern                | High        | High            | High        |
+| Hexagonal Architecture (Ports & Adapters) | Very High  | Very High       | Moderate    |
+
+- **Adapter Pattern:** This approach provides a straightforward way to adapt different DI frameworks but may not be as flexible in terms of switching strategies dynamically.
+- **Strategy Pattern:** This approach allows for dynamic selection of DI strategies at runtime, offering high flexibility and maintainability.
+- **Hexagonal Architecture (Ports & Adapters):** This approach provides the highest flexibility and maintainability by decoupling the core logic from specific DI implementations, but it can be more complex to set up initially.
+
+<br>
+---
+
+### set-up:
+```
+# Initialize git repository if not already initialized
+git init
+
+# Create and switch to 'adapter-pattern' branch
+git checkout -b adapter-pattern
+python create_structure.py structure_adapter_pattern.md
+git add .
+git commit -m "Create structure for adapter pattern"
+git push origin adapter-pattern
+
+# Switch back to main branch
+git checkout main
+
+# Create and switch to 'strategy-pattern' branch
+git checkout -b strategy-pattern
+python create_structure.py structure_strategy_pattern.md
+git add .
+git commit -m "Create structure for strategy pattern"
+git push origin strategy-pattern
+
+# Switch back to main branch
+git checkout main
+
+# Create and switch to 'hexagonal-architecture' branch
+git checkout -b hexagonal-architecture
+python create_structure.py structure_hexagonal_architecture.md
+git add .
+git commit -m "Create structure for hexagonal architecture"
+git push origin hexagonal-architecture
+```
+
+---
 In the Python ecosystem, certain DI frameworks and tools are more popular and commonly used than others. Here’s an overview of their use cases and prevalence:
 
 1. **Dependency Injector**
@@ -52,3 +101,5 @@ In the Python ecosystem, certain DI frameworks and tools are more popular and co
     - **Popularity**: High (for small to medium projects)
     - **Use Cases**: Simple applications or scripts where full-fledged DI frameworks are overkill. Standard Python features are used to achieve basic DI.
     - **Insights**: Commonly used in smaller projects or for quick prototypes where introducing a full DI framework would be unnecessary overhead.
+
+
