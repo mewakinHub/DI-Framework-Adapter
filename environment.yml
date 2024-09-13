@@ -1,0 +1,19 @@
+name: DI-Adapter
+dependencies:
+  # Conda packages
+  - python=3.11
+  - numpy
+  - pandas
+  - scikit-learn
+  - matplotlib
+  - pytest
+  - pyyaml
+
+  # Pip packages
+  - pip
+  - pip:
+    - injector
+    - dependency-injector
+    - pinject
+    - wired
+    # - fastapi # would test if have time
